@@ -13,8 +13,8 @@ This is the entry page of the project. Each part has its own repository with man
 | [**Switchless-Multi-Speeder-Commodore-1541**](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-1541) | Hardware: Multi-Speeder V3 for the 1541 and 1541-II / für 1541 und 1541-II |
 | [**Switchless-Multi-Speeder-Commodore-1571**](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-1571) | Hardware: Multi-Speeder V3 for the external 1571 / für die externe 1571 |
 | [**Switchless-Multi-Speeder-Commodore-C128DCR-1571**](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-C128DCR-1571) | Hardware: Multi-Speeder V3 for the C128DCR (internal 1571) with kernal switcher / für den C128DCR (internes Laufwerk 1571) mit Kernal-Switcher |
-| [**DolphinDOS**](https://github.com/FraEgg/DolphinDOS) | Firmware: DolphinDos26 – drive ROMs, C64 and C128 kernals, MS-Tools, all manuals / Laufwerks-ROMs, C64- und C128-Kernals, MS-Tools, alle Handbücher |
-| [**SpeedDOS**](https://github.com/FraEgg/SpeedDOS) | Firmware: SpeedDos26 – drive ROMs for 1541 and 1571, C64 and C128 kernals, manual / Laufwerks-ROMs für 1541 und 1571, C64- und C128-Kernals, Handbuch |
+| [**DolphinDOS**](https://github.com/FraEgg/DolphinDOS) | Firmware: DolphinDos26 – drive ROMs, C64, C128 and VIC-20 kernals, MS-Tools, all manuals / Laufwerks-ROMs, C64-, C128- und VIC-20-Kernals, MS-Tools, alle Handbücher |
+| [**SpeedDOS**](https://github.com/FraEgg/SpeedDOS) | Firmware: SpeedDos26 – drive ROMs for 1541 and 1571, C64, C128 and VIC-20 kernals, manual / Laufwerks-ROMs für 1541 und 1571, C64-, C128- und VIC-20-Kernals, Handbuch |
 | [**Parallel port adapter**](https://github.com/FraEgg/commodore-1541-parallel-port-adapter-c64-c128-speeddos-dolphindos) | Accessory: parallel cable for 1541, 1541-II and 1571 to the user port / Zubehör: Parallelkabel für 1541, 1541-II und 1571 zum Userport |
 
 <p align="center"><img src="assets/installation-1541-II.jpg" alt="Multi-Speeder V3 fitted in a Commodore 1541-II" width="560"></p>
@@ -45,7 +45,7 @@ The heart of the project is the kernals for the C64 and the C128. They no longer
 |---|---|---|
 | Drive with DolphinDos26 or DolphinDOS and parallel cable | DolphinDOS parallel | `LOADING DD:` |
 | Drive with SpeedDos26 or SpeedDOS and parallel cable | SpeedDOS parallel | `LOADING SD:` |
-| Any device with **JiffyDOS**: SD2IEC, drives with a JiffyDOS ROM, Pi1541 | **JiffyDOS** | `LOADING JD:` / `JF:` |
+| Any device with **JiffyDOS**: SD2IEC, drives with a JiffyDOS ROM, Pi1541 | **JiffyDOS** | `LOADING JD:` |
 | 1571 or 1581 on a C128 | Commodore burst mode | `LOADING BU:` (SpeedDos26) |
 | Everything else | standard serial | – |
 
@@ -96,7 +96,9 @@ The project deliberately builds bridges between the original machines and the ha
 |---|---|---|
 | **1541, 1541-II** | 8 DOS banks, 512 KB RAM, PIA parallel port, extra ROM area for DOS extensions; RAMBoard-compatible for nibbler programs | [Switchless-Multi-Speeder-Commodore-1541](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-1541) |
 | **External 1571** | 8 DOS banks, 512 KB RAM, PIA parallel port; Commodore DOS, DolphinDOS 3, DolphinDos26 and SpeedDos26 in the ready-made template | [Switchless-Multi-Speeder-Commodore-1571](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-1571) |
-| **C128DCR (internal 1571)** | the same for the built-in drive, plus a kernal switcher that follows the DOS bank, and the browser tool MS-ROM-Builder for your own EPROM images | [Switchless-Multi-Speeder-Commodore-C128DCR-1571](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-C128DCR-1571) |
+| **C128DCR (internal 1571)** | the same for the built-in drive, plus a kernal switcher that follows the DOS bank | [Switchless-Multi-Speeder-Commodore-C128DCR-1571](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-C128DCR-1571) |
+
+Each of the three repositories also holds the browser tool **MS-ROM-Builder** (`rom-builder/MS-ROM-Builder.html`): one tool for all three boards, for assembling your own EPROM images.
 | **Parallel cable** | adapter and cable from the drive to the user port of the C64 or C128 | [commodore-1541-parallel-port-adapter](https://github.com/FraEgg/commodore-1541-parallel-port-adapter-c64-c128-speeddos-dolphindos) |
 
 <p align="center">
@@ -111,6 +113,7 @@ A further development of **DolphinDOS 3.0** by Günther Jilg and Jan Bubela, and
 - whole disks in the drive RAM (`CDR`/`CDW`), RAM disk, track cache, 40 tracks
 - drive ROMs for the 1541 Multi-Speeder, for the 1571 (external and C128DCR) and, as DolphinDos26UL, for the Commodore 64 Ultimate and drives with DolphinDOS 2 hardware
 - C64 and C128 kernals with DolphinDOS parallel, JiffyDOS and serial
+- new: kernals for the **VIC-20 (VC20)**, PAL and NTSC, with DolphinDOS parallel, JiffyDOS and serial
 - the **MS-Tools** for testing and copying (see below)
 
 <p align="center"><img src="assets/ms_04_ramdisk.png" alt="RAM disk in the drive" width="400"></p>
@@ -124,6 +127,7 @@ A revision of the legendary **SpeedDOS+** by Oliver Eikemeier and Oliver Joppich
 - runs with the classic SpeedDOS parallel cable on a plain 1541 or 1541-II – even without a Multi-Speeder
 - new: firmware for the **1571** with double-sided disks, automatic 2 MHz mode and built-in fast loader, and a kernal for the **C128**
 - C64 and C128 kernals with SpeedDOS parallel, JiffyDOS, burst and serial; 40 tracks with `N:NAME,ID+`
+- new: kernals for the **VIC-20 (VC20)**, PAL and NTSC, with the SpeedDOS fast loader, JiffyDOS and serial
 
 → [github.com/FraEgg/SpeedDOS](https://github.com/FraEgg/SpeedDOS)
 
@@ -167,7 +171,7 @@ MS-FASTCOPY also works without a Multi-Speeder: a REU and a parallel connection 
 
 ## JiffyDOS licence: please check
 
-The C64 and C128 kernals of DolphinDos26 and SpeedDos26 contain JiffyDOS transfer routines that are instruction-identical to a JiffyDOS kernal. The JiffyDOS drive firmware is not part of this project; JiffyDOS is commercial software, and a licence is available from [RETRO Innovations](https://www.jiffydos.com). Jim Brain of RETRO Innovations, which holds the JiffyDOS licence rights, confirmed that publishing the kernals on GitHub is fine. As he describes it, the end user would need a licence where the transfer code is the same, as it is here.
+The C64, C128 and VIC-20 kernals of DolphinDos26 and SpeedDos26 contain JiffyDOS transfer routines that are instruction-identical to a JiffyDOS kernal. The JiffyDOS drive firmware is not part of this project; JiffyDOS is commercial software, and a licence is available from [RETRO Innovations](https://www.jiffydos.com). Jim Brain of RETRO Innovations, which holds the JiffyDOS licence rights, confirmed that publishing the kernals on GitHub is fine. As he describes it, the end user would need a licence where the transfer code is the same, as it is here.
 
 **Please check for yourself whether your use calls for an official JiffyDOS licence:** <https://www.jiffydos.com>
 
@@ -221,7 +225,7 @@ Das Herz des Projekts sind die Kernals für den C64 und den C128. Sie kennen nic
 |---|---|---|
 | Laufwerk mit DolphinDos26 oder DolphinDOS und Parallelkabel | DolphinDOS parallel | `LOADING DD:` |
 | Laufwerk mit SpeedDos26 oder SpeedDOS und Parallelkabel | SpeedDOS parallel | `LOADING SD:` |
-| Jedes Gerät mit **JiffyDOS**: SD2IEC, Laufwerke mit JiffyDOS-ROM, Pi1541 | **JiffyDOS** | `LOADING JD:` / `JF:` |
+| Jedes Gerät mit **JiffyDOS**: SD2IEC, Laufwerke mit JiffyDOS-ROM, Pi1541 | **JiffyDOS** | `LOADING JD:` |
 | 1571 oder 1581 am C128 | Burst-Modus von Commodore | `LOADING BU:` (SpeedDos26) |
 | Alles andere | seriell wie im Original | – |
 
@@ -272,7 +276,9 @@ Das Projekt schlägt bewusst Brücken zwischen den Originalgeräten und der Hard
 |---|---|---|
 | **1541, 1541-II** | 8 DOS-Bänke, 512 KB RAM, PIA-Parallelport, zusätzlicher ROM-Bereich für DOS-Erweiterungen; RAMBoard-kompatibel für Nibbler-Programme | [Switchless-Multi-Speeder-Commodore-1541](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-1541) |
 | **Externe 1571** | 8 DOS-Bänke, 512 KB RAM, PIA-Parallelport; Commodore-DOS, DolphinDOS 3, DolphinDos26 und SpeedDos26 in der fertigen Vorlage | [Switchless-Multi-Speeder-Commodore-1571](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-1571) |
-| **C128DCR (internes Laufwerk 1571)** | dasselbe für das eingebaute Laufwerk, dazu ein Kernal-Switcher, der der DOS-Bank folgt, und das Browser-Werkzeug MS-ROM-Builder für eigene EPROM-Images | [Switchless-Multi-Speeder-Commodore-C128DCR-1571](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-C128DCR-1571) |
+| **C128DCR (internes Laufwerk 1571)** | dasselbe für das eingebaute Laufwerk, dazu ein Kernal-Switcher, der der DOS-Bank folgt | [Switchless-Multi-Speeder-Commodore-C128DCR-1571](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-C128DCR-1571) |
+
+In jedem der drei Repositorys liegt außerdem das Browser-Werkzeug **MS-ROM-Builder** (`rom-builder/MS-ROM-Builder.html`): ein Werkzeug für alle drei Platinen, mit dem sich eigene EPROM-Images zusammenstellen lassen.
 | **Parallelkabel** | Adapter und Kabel vom Laufwerk zum Userport von C64 oder C128 | [commodore-1541-parallel-port-adapter](https://github.com/FraEgg/commodore-1541-parallel-port-adapter-c64-c128-speeddos-dolphindos) |
 
 <p align="center">
@@ -287,6 +293,7 @@ Eine Weiterentwicklung von **DolphinDOS 3.0** von Günther Jilg und Jan Bubela �
 - ganze Disketten im Laufwerks-RAM (`CDR`/`CDW`), RAM-Disk, Track-Cache, 40 Spuren
 - Laufwerks-ROMs für den 1541 Multi-Speeder, für die 1571 (extern und C128DCR) und als DolphinDos26UL für den Commodore 64 Ultimate und Laufwerke mit DolphinDOS-2-Hardware
 - C64- und C128-Kernals mit DolphinDOS parallel, JiffyDOS und seriell
+- neu: Kernals für den **VIC-20 (VC20)**, PAL und NTSC, mit DolphinDOS parallel, JiffyDOS und seriell
 - die **MS-Tools** zum Testen und Kopieren (siehe unten)
 
 <p align="center"><img src="assets/ms_04_ramdisk.png" alt="RAM-Disk im Laufwerk" width="400"></p>
@@ -300,6 +307,7 @@ Eine Überarbeitung des legendären **SpeedDOS+** von Oliver Eikemeier und Olive
 - läuft mit dem klassischen SpeedDOS-Parallelkabel an einer einfachen 1541 oder 1541-II – auch ohne Multi-Speeder
 - neu: Firmware für die **1571** mit doppelseitigen Disketten, automatischem 2-MHz-Betrieb und eingebautem Schnelllader sowie ein Kernal für den **C128**
 - C64- und C128-Kernals mit SpeedDOS parallel, JiffyDOS, Burst und seriell; 40 Spuren mit `N:NAME,ID+`
+- neu: Kernals für den **VIC-20 (VC20)**, PAL und NTSC, mit dem SpeedDOS-Schnelllader, JiffyDOS und seriell
 
 → [github.com/FraEgg/SpeedDOS](https://github.com/FraEgg/SpeedDOS)
 
@@ -343,7 +351,7 @@ MS-FASTCOPY geht auch ohne Multi-Speeder: Eine REU und eine Parallelverbindung g
 
 ## JiffyDOS-Lizenz: bitte prüfen
 
-Die C64- und C128-Kernals von DolphinDos26 und SpeedDos26 enthalten JiffyDOS-Übertragungsroutinen, die befehlsgleich aus einem JiffyDOS-Kernal stammen. Die JiffyDOS-Firmware für das Laufwerk gehört nicht zu diesem Projekt; JiffyDOS ist kommerzielle Software, eine Lizenz gibt es bei [RETRO Innovations](https://www.jiffydos.com). Jim Brain von RETRO Innovations, das die JiffyDOS-Lizenzrechte hält, hat die Veröffentlichung der Kernals auf GitHub erlaubt. Nach seiner Beschreibung bräuchte der Endanwender eine Lizenz, wenn der Übertragungscode derselbe ist – so wie hier.
+Die C64-, C128- und VIC-20-Kernals von DolphinDos26 und SpeedDos26 enthalten JiffyDOS-Übertragungsroutinen, die befehlsgleich aus einem JiffyDOS-Kernal stammen. Die JiffyDOS-Firmware für das Laufwerk gehört nicht zu diesem Projekt; JiffyDOS ist kommerzielle Software, eine Lizenz gibt es bei [RETRO Innovations](https://www.jiffydos.com). Jim Brain von RETRO Innovations, das die JiffyDOS-Lizenzrechte hält, hat die Veröffentlichung der Kernals auf GitHub erlaubt. Nach seiner Beschreibung bräuchte der Endanwender eine Lizenz, wenn der Übertragungscode derselbe ist – so wie hier.
 
 **Bitte prüfe selbst, ob du wegen der Nutzung eine offizielle JiffyDOS-Lizenz erwerben solltest:** <https://www.jiffydos.com>
 
