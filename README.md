@@ -140,8 +140,7 @@ The **MS-Tools** are the toolbox of the project: a set of C64 programs on one di
 | **MS-FASTCOPY** | Copies a whole disk through the 512 KB RAM of the Multi-Speeder or a REU, with its own fast drive code. 35 or 40 tracks, verify, several copies in a row, directory view. Imports and exports **D64 files** – the direct bridge between real disks and the SD2IEC; on the 1571 also double-sided disks and D71 files. |
 | **MS-NIBCOPY** (beta) | A nibble copier after the model of nibtools, running on the real machine: reads and writes tracks bit by bit, including syncs, gaps, tracks 36 to 42, half tracks and weak bits. Imports and exports **G64 files**. |
 | **MS-15SECCOPY** | A new version of the classic **15 Seconds Copy** by Mike Pall (1986): copies a disk as raw GCR over the parallel cable and shows every track and sector in a grid. An original 1541 ROM and the original kernal are enough – only a parallel cable and a REU are needed. |
-| **MS-MEMTEST** | Tests the 512 KB RAM of the Multi-Speeder bank by bank – the first program to run after building the board. |
-| **MS-STATUS** | Shows the error channel of the drive at a keypress. |
+| **MS-DIAG** | The diagnostic program – the first one to run after building the board: tests the 512 KB RAM bank by bank, the parallel connection, the switching of all eight ROM banks, and CDR, CDW and the RAM disk with a test disk. All tests can also run as a burn-in. |
 | **MS-RS232** | An RS-232 driver in RAM for programs that need the serial interface. |
 
 MS-FASTCOPY also works without a Multi-Speeder: a REU and a parallel connection are enough, for example on the Commodore 64 Ultimate with DolphinDos26UL.
@@ -150,7 +149,7 @@ MS-FASTCOPY also works without a Multi-Speeder: a REU and a parallel connection 
 <img src="assets/ms_05_fastcopy.png" alt="MS-FASTCOPY" width="380">
 <img src="assets/ms_07_nibcopy.png" alt="MS-NIBCOPY" width="380">
 <img src="assets/ms_11_15seccopy.png" alt="MS-15SECCOPY" width="380">
-<img src="assets/ms_03_memtest.png" alt="MS-MEMTEST" width="380">
+<img src="assets/ms_03_diag.png" alt="MS-DIAG" width="380">
 </p>
 
 → Disk image, single programs and the manual: [github.com/FraEgg/DolphinDOS](https://github.com/FraEgg/DolphinDOS)
@@ -320,8 +319,7 @@ Die **MS-Tools** sind der Werkzeugkasten des Projekts: eine Sammlung von C64-Pro
 | **MS-FASTCOPY** | Kopiert eine ganze Diskette über das 512-KB-RAM des Multi-Speeders oder eine REU, mit eigenem schnellen Laufwerkscode. 35 oder 40 Spuren, Verify, mehrere Kopien nacheinander, Directory-Anzeige. Importiert und exportiert **D64-Dateien** – die direkte Brücke zwischen echten Disketten und dem SD2IEC; an der 1571 auch doppelseitige Disketten und D71-Dateien. |
 | **MS-NIBCOPY** (Beta) | Ein Nibble-Kopierer nach dem Vorbild der nibtools, direkt am echten Rechner: liest und schreibt Spuren bitgenau, einschließlich Syncs, Lücken, Spur 36 bis 42, Halbspuren und Weak Bits. Importiert und exportiert **G64-Dateien**. |
 | **MS-15SECCOPY** | Eine neue Fassung des Klassikers **15 Seconds Copy** von Mike Pall (1986): kopiert eine Diskette als rohes GCR über das Parallelkabel und zeigt jede Spur und jeden Sektor in einem Raster. Original-1541-ROM und Original-Kernal genügen – nötig sind nur ein Parallelkabel und eine REU. |
-| **MS-MEMTEST** | Prüft die 512 KB RAM des Multi-Speeders Bank für Bank – das erste Programm nach dem Aufbau der Platine. |
-| **MS-STATUS** | Zeigt den Fehlerkanal des Laufwerks auf Tastendruck. |
+| **MS-DIAG** | Das Diagnoseprogramm – das erste nach dem Aufbau der Platine: prüft die 512 KB RAM Bank für Bank, die Parallelverbindung, das Umschalten aller acht ROM-Bänke sowie CDR, CDW und die RAM-Disk mit einer Testdiskette. Alle Tests laufen auch als Burn-In. |
 | **MS-RS232** | Ein RS-232-Treiber im RAM für Programme, die die serielle Schnittstelle brauchen. |
 
 MS-FASTCOPY geht auch ohne Multi-Speeder: Eine REU und eine Parallelverbindung genügen, zum Beispiel am Commodore 64 Ultimate mit DolphinDos26UL.
@@ -330,7 +328,7 @@ MS-FASTCOPY geht auch ohne Multi-Speeder: Eine REU und eine Parallelverbindung g
 <img src="assets/ms_05_fastcopy.png" alt="MS-FASTCOPY" width="380">
 <img src="assets/ms_07_nibcopy.png" alt="MS-NIBCOPY" width="380">
 <img src="assets/ms_11_15seccopy.png" alt="MS-15SECCOPY" width="380">
-<img src="assets/ms_03_memtest.png" alt="MS-MEMTEST" width="380">
+<img src="assets/ms_03_diag.png" alt="MS-DIAG" width="380">
 </p>
 
 → Disketten-Abbild, einzelne Programme und das Handbuch: [github.com/FraEgg/DolphinDOS](https://github.com/FraEgg/DolphinDOS)
