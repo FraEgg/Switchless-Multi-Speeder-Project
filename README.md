@@ -120,9 +120,8 @@ A further development of **DolphinDOS 3.0** by Günther Jilg and Jan Bubela, and
 
 <p align="center">
 <img src="assets/vic_01_startbild.png" alt="Power-on screen of the VIC-20 kernal DolphinDos26" width="400">
-<img src="assets/vic_02_status.png" alt="VIC-20: @ shows the message of the drive" width="400">
 </p>
-<p align="center"><em>VIC-20 with the DolphinDos26 kernal: power-on screen and the message of the drive with <code>@</code></em></p>
+<p align="center"><em>VIC-20 with the DolphinDos26 kernal: power-on screen</em></p>
 
 → [github.com/FraEgg/DolphinDOS](https://github.com/FraEgg/DolphinDOS)
 
@@ -305,9 +304,8 @@ Eine Weiterentwicklung von **DolphinDOS 3.0** von Günther Jilg und Jan Bubela �
 
 <p align="center">
 <img src="assets/vic_01_startbild.png" alt="Einschaltbild des VIC-20-Kernals DolphinDos26" width="400">
-<img src="assets/vic_02_status.png" alt="VIC-20: @ zeigt die Meldung des Laufwerks" width="400">
 </p>
-<p align="center"><em>VIC-20 mit dem DolphinDos26-Kernal: Einschaltbild und die Meldung des Laufwerks mit <code>@</code></em></p>
+<p align="center"><em>VIC-20 mit dem DolphinDos26-Kernal: Einschaltbild</em></p>
 
 → [github.com/FraEgg/DolphinDOS](https://github.com/FraEgg/DolphinDOS)
 
