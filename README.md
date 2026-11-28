@@ -13,6 +13,7 @@ This is the entry page of the project. Each part has its own repository with man
 | [**Switchless-Multi-Speeder-Commodore-1541**](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-1541) | Hardware: Multi-Speeder V3 for the 1541 and 1541-II / für 1541 und 1541-II |
 | [**Switchless-Multi-Speeder-Commodore-1571**](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-1571) | Hardware: Multi-Speeder V3 for the external 1571 / für die externe 1571 |
 | [**Switchless-Multi-Speeder-Commodore-C128DCR-1571**](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-C128DCR-1571) | Hardware: Multi-Speeder V3 for the C128DCR (internal 1571) with kernal switcher / für den C128DCR (internes Laufwerk 1571) mit Kernal-Switcher |
+| [**TRX64U-MultiCore-Multi-Speeder**](https://github.com/FraEgg/TRX64U-MultiCore-Multi-Speeder) | FPGA core: the C64 with a 1541 and the Multi-Speeder V3 for the C64 Ultimate and the Ultimate 64 Elite II / FPGA-Core: der C64 mit 1541 und Multi-Speeder V3 für den C64 Ultimate und den Ultimate 64 Elite II |
 | [**DolphinDOS**](https://github.com/FraEgg/DolphinDOS) | Firmware: DolphinDos26 – drive ROMs, C64, C128 and VIC-20 kernals, MS-Tools, all manuals / Laufwerks-ROMs, C64-, C128- und VIC-20-Kernals, MS-Tools, alle Handbücher |
 | [**SpeedDOS**](https://github.com/FraEgg/SpeedDOS) | Firmware: SpeedDos26 – drive ROMs for 1541 and 1571, C64, C128 and VIC-20 kernals, manual / Laufwerks-ROMs für 1541 und 1571, C64-, C128- und VIC-20-Kernals, Handbuch |
 | [**Parallel port adapter**](https://github.com/FraEgg/commodore-1541-parallel-port-adapter-c64-c128-speeddos-dolphindos) | Accessory: parallel cable for 1541, 1541-II and 1571 to the user port / Zubehör: Parallelkabel für 1541, 1541-II und 1571 zum Userport |
@@ -76,6 +77,7 @@ The project deliberately builds bridges between the original machines and the ha
 
 - **SD2IEC.** JiffyDOS in the kernal and dedicated function keys make the card reader a full partner of the real drive. Copy from disk to SD card and back with the MS-Tools.
 - **FPGA-based machines such as the Commodore 64 Ultimate.** **DolphinDos26UL** is a firmware made for the drive of the Ultimate: it uses the parallel cable that the machine provides internally. Load the DolphinDos26 kernal and the drive ROM in the menu, and the Ultimate loads in parallel – without any soldering.
+- **The Multi-Speeder as an FPGA core.** The core **TRX64 C64-MS** for TRX64U MultiCore recreates the C64 with a 1541 and the complete Multi-Speeder V3 in the FPGA of the **C64 Ultimate** and the **Ultimate 64 Elite II**: eight ROM banks, 512 KB of drive RAM, the 6821 PIA, bank switching with `n@RNROM` and the parallel cable. It runs the same 512 KB image `C1541_29F040.BIN` as the real board. Core, manuals and source code: [TRX64U-MultiCore-Multi-Speeder](https://github.com/FraEgg/TRX64U-MultiCore-Multi-Speeder).
 - **Pi1541 and JiffyDOS drives.** Devices that run a JiffyDOS drive ROM are served with JiffyDOS automatically; a separate JiffyDOS manual explains commands, function keys and setup.
 - **C128 and C128DCR.** The C128 kernals bring everything to C128 mode. In the C128DCR, a kernal switcher changes the kernal together with the DOS bank of the drive: one command, and computer and drive speak the same language.
 - **G64 disk images.** MS-NIBCOPY (beta) reads disks bit by bit and exchanges them as G64 files with emulators, the SD2IEC and the Ultimate.
@@ -170,6 +172,7 @@ MS-FASTCOPY also works without a Multi-Speeder: a REU and a parallel connection 
 | an external 1571 | [Multi-Speeder V3 for the 1571](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-1571) |
 | a C128DCR | [Multi-Speeder V3 for the C128DCR](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-C128DCR-1571) |
 | a Commodore 64 Ultimate | [DolphinDOS](https://github.com/FraEgg/DolphinDOS), manual DolphinDos26UL |
+| a C64 Ultimate or Ultimate 64 Elite II and want the complete Multi-Speeder in the FPGA | [TRX64U-MultiCore-Multi-Speeder](https://github.com/FraEgg/TRX64U-MultiCore-Multi-Speeder), EPROM image from [Multi-Speeder V3 for the 1541](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-1541/tree/main/rom) |
 | a C64 or C128 with an SD2IEC and want JiffyDOS plus the function keys | kernal from [DolphinDOS](https://github.com/FraEgg/DolphinDOS) or [SpeedDOS](https://github.com/FraEgg/SpeedDOS) |
 | no parallel cable yet | [Parallel port adapter](https://github.com/FraEgg/commodore-1541-parallel-port-adapter-c64-c128-speeddos-dolphindos) |
 
@@ -260,6 +263,7 @@ Das Projekt schlägt bewusst Brücken zwischen den Originalgeräten und der Hard
 
 - **SD2IEC.** JiffyDOS im Kernal und eigene Funktionstasten machen den Kartenleser zum vollwertigen Partner des echten Laufwerks. Mit den MS-Tools kopierst du von Diskette auf SD-Karte und zurück.
 - **FPGA-basierte Geräte wie der Commodore 64 Ultimate.** **DolphinDos26UL** ist eine Firmware eigens für das Laufwerk des Ultimate: Sie nutzt das Parallelkabel, das das Gerät intern bereitstellt. Kernal DolphinDos26 und Laufwerks-ROM im Menü laden, und der Ultimate lädt parallel – ganz ohne Löten.
+- **Der Multi-Speeder als FPGA-Core.** Der Core **TRX64 C64-MS** für TRX64U MultiCore bildet den C64 mit 1541 und dem kompletten Multi-Speeder V3 im FPGA des **C64 Ultimate** und des **Ultimate 64 Elite II** nach: acht ROM-Bänke, 512 KB Laufwerks-RAM, die PIA 6821, Bankumschaltung mit `n@RNROM` und das Parallelkabel. Er verwendet dasselbe 512-KB-Image `C1541_29F040.BIN` wie die echte Platine. Core, Anleitungen und Quellcode: [TRX64U-MultiCore-Multi-Speeder](https://github.com/FraEgg/TRX64U-MultiCore-Multi-Speeder).
 - **Pi1541 und JiffyDOS-Laufwerke.** Geräte mit einem JiffyDOS-Laufwerks-ROM werden automatisch mit JiffyDOS bedient; ein eigenes JiffyDOS-Handbuch erklärt Befehle, Funktionstasten und Einrichtung.
 - **C128 und C128DCR.** Die C128-Kernals bringen alles in den C128-Modus. Im C128DCR schaltet ein Kernal-Switcher den Kernal zusammen mit der DOS-Bank des Laufwerks um: ein Befehl, und Rechner und Laufwerk sprechen dieselbe Sprache.
 - **G64-Disk-Images.** MS-NIBCOPY (Beta) liest Disketten bitgenau und tauscht sie als G64-Dateien mit Emulatoren, dem SD2IEC und dem Ultimate aus.
@@ -354,6 +358,7 @@ MS-FASTCOPY geht auch ohne Multi-Speeder: Eine REU und eine Parallelverbindung g
 | eine externe 1571 | [Multi-Speeder V3 für die 1571](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-1571) |
 | einen C128DCR | [Multi-Speeder V3 für den C128DCR](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-C128DCR-1571) |
 | einen Commodore 64 Ultimate | [DolphinDOS](https://github.com/FraEgg/DolphinDOS), Handbuch DolphinDos26UL |
+| einen C64 Ultimate oder Ultimate 64 Elite II und willst den kompletten Multi-Speeder im FPGA | [TRX64U-MultiCore-Multi-Speeder](https://github.com/FraEgg/TRX64U-MultiCore-Multi-Speeder), EPROM-Image aus [Multi-Speeder V3 für die 1541](https://github.com/FraEgg/Switchless-Multi-Speeder-Commodore-1541/tree/main/rom) |
 | einen C64 oder C128 mit SD2IEC und willst JiffyDOS samt Funktionstasten | Kernal aus [DolphinDOS](https://github.com/FraEgg/DolphinDOS) oder [SpeedDOS](https://github.com/FraEgg/SpeedDOS) |
 | noch kein Parallelkabel | [Parallelport-Adapter](https://github.com/FraEgg/commodore-1541-parallel-port-adapter-c64-c128-speeddos-dolphindos) |
 
